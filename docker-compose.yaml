@@ -8,7 +8,7 @@ services:
       - .env
     volumes:
       - ./config/:/etc/mongo
-      - ./data/db:/data/db
+      - ./data:/data
     ports:
         - 8024:27017
     command: ["mongod", "--config", "/etc/mongo/mongod.conf"]

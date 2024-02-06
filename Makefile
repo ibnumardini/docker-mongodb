@@ -1,3 +1,6 @@
+CONTAINER_NAME=mongodb
+NOW := $(shell date +'%Y-%m-%d_%H-%M-%S')
+
 up:
 	@docker compose up --build
 	
@@ -8,4 +11,7 @@ down:
 	@docker compose down
 
 dump:
-	docker exec mongodb sh -c 'exec mongodump -d <database_name> --archive' > data/all-collections.archive
+	@docker exec -i $(CONTAINER_NAME) /usr/bin/mongodump -u $(USER) -p $(PASS) --authenticationDatabase admin -d $(DB_NAME) --out /data/archive/$(DB_NAME)_$(NOW)_dump/
+
+restore:
+	@docker exec -i $(CONTAINER_NAME) /usr/bin/mongorestore -u $(USER) -p $(PASS) --authenticationDatabase admin --nsInclude="$(DB_NAME).*" /data/archive/$(DB_DUMP_NAME)/
