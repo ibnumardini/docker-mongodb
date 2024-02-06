@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  mongodb:
+    image: mongo:7.0.5-jammy
+    container_name: mongodb
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./config/:/etc/mongo
+      - ./data/db:/data/db
+    ports:
+        - 8024:27017
+    command: ["mongod", "--config", "/etc/mongo/mongod.conf"]
