@@ -5,7 +5,7 @@ This repository provides a customized Docker ecosystem for MongoDB, offering str
 ### Serve
 To run the MongoDB container, execute the following commands:
 - Run normally: `make up`
-- Run with daemon: `make up-d` 
+- Run detach: `make up-d` 
 
 ### Stop
 To stop the MongoDB container, use the command:
