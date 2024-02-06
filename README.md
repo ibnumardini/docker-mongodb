@@ -13,11 +13,11 @@ To stop the MongoDB container, use the command:
 
 ### Backup
 Create a backup of a specific database with the following command:
-- `make dump DB_NAME={dbTarget} USER={user} PASS={pass}`
+- `make dump USER={user} PASS={pass}` DB_NAME={dbTarget}
 
 ### Restore
 Restore a database from a previously created dump with the following command:
-- `make restore DB_NAME={dbTarget} USER={user} PASS={pass} DB_DUMP_DIR={dbDumpDir}` <br><br>
+- `make restore USER={user} PASS={pass} DB_NAME={dbTarget} DB_DUMP_DIR={dbDumpDir}` <br><br>
 
 Make sure to replace placeholders like `{dbTarget}`, `{user}`, `{pass}`, and `{dbDumpDir}` with your actual values.
 
