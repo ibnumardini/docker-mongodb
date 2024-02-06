@@ -3,7 +3,7 @@ This repository provides a customized Docker ecosystem for MongoDB, offering str
 
 ## Usage
 ### Serve
-- To run the MongoDB container, execute the following commands:
+To run the MongoDB container, execute the following commands:
 - Run normally: `make up`
 - Run with daemon: `make up-d` 
 
