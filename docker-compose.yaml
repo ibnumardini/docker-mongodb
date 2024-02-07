@@ -10,6 +10,7 @@ services:
       - ./config/:/etc/mongo
       - ./data/db:/data/db
       - ./data/archive:/data/archive
+      - ./data/log:/var/log/mongodb
     ports:
         - 8024:27017
     command: ["mongod", "--config", "/etc/mongo/mongod.conf"]
