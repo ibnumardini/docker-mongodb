@@ -19,6 +19,6 @@ Create a backup of a specific database with the following command:
 Restore a database from a previously created dump with the following command:
 - `make restore USER={user} PASS={pass} DB_NAME={dbTarget} DB_DUMP_DIR={dbDumpDir}` <br><br>
 
-Make sure to replace placeholders like `{dbTarget}`, `{user}`, `{pass}`, and `{dbDumpDir}` with your actual values.
+Make sure to replace placeholders like `{user}`, `{pass}`, `{dbTarget}`, and `{dbDumpDir}` with your actual values.
 
 Feel free to tailor these commands to suit your specific MongoDB setup and requirements.
