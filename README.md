@@ -1,4 +1,4 @@
-# MongoDB Docker Contabo
+# MongoDB Docker
 This repository provides a customized Docker ecosystem for MongoDB, offering streamlined commands for serving, stopping, backing up, and restoring MongoDB databases.  
 
 ## Usage
